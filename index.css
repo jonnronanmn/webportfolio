@@ -1,0 +1,243 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /*font-family: 'Montserrat', sans-serif;*/
+  font-family: 'Lato', sans-serif;
+}
+
+body{
+  background-color: #071621;
+}
+
+#home {
+  position: relative;
+  background-color: #031624; /* Base background color */
+  height: 100%;
+  min-height: 400px;
+  color: white;
+  overflow: hidden;
+}
+
+#home::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: url('./images/gradpic.jpg') no-repeat center center;
+  background-size: contain;
+  opacity: 0.60;
+  z-index: 1;
+}
+
+#home .row {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  animation: slideRight 1s ease-out forwards;
+}
+
+.slide-in h1,
+.slide-in p {
+  opacity: 0;
+  animation: slideRight 1s ease-out forwards;
+}
+
+.slide-in h1:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.slide-in h1:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.slide-in p {
+  animation-delay: 0.8s;
+}
+
+.navbar-custom {
+  background-color: #071621 !important;
+}
+
+.carousel-item {
+  display: fluid;
+  justify-content: center;
+  align-items: center;
+  height: 400px; /* Adjust as needed for uniform image height */
+  padding: 10px;
+}
+
+/* Carousel images */
+.carousel-img {
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* Card style */
+.custom-card {
+  min-height: 580px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  background-color: #fef5ee !important;
+  color: #333;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+}
+
+#connectMe {
+  background-color: #031624;
+}
+
+#connectMe a img {
+  transition: transform 0.3s ease;
+}
+
+#connectMe a:hover img {
+  transform: scale(1.1);
+}
+
+#connectMe .form-control,
+#connectMe textarea {
+  background-color: #0d1b2a;
+  border: 1px solid #ccc;
+  color: #fff;
+}
+
+#connectMe .form-control::placeholder,
+#connectMe textarea::placeholder {
+  color: #bbb;
+}
+
+#connectMe .form-control:focus,
+#connectMe textarea:focus {
+  border-color: #b59066;
+  box-shadow: 0 0 0 0.2rem rgba(181, 144, 102, 0.25);
+}
+
+#connectMe .btn {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#connectMe .btn:hover {
+  background-color: #b59066;
+  color: #000;
+}
+
+/* Section background */
+#projects {
+  background-color: #071621;
+  color: #ffffff; /* make default text white */
+}
+
+/* Card Styling */
+.project-card {
+  background-color: #fff7f0; /* match section bg */
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Card content text */
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-text {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* Button styling */
+.custom-btn {
+  background-color: #B59066;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #a1784e;
+}
+
+/* Fade-Up Animation */
+.animate-fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive image handling */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+
+@media (max-width: 576px) {
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+
+  .custom-btn {
+    font-size: 0.9rem;
+  }
+
+
+  /*contact*/
+/*  .contact-form-box {
+  max-width: 500px;
+  width: 100%;
+  background-color: #1e293b;
+}
+
+.contact-section {
+  padding: 2rem 1rem;
+}*/
