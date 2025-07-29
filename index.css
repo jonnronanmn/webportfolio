@@ -19,7 +19,7 @@ body{
   overflow: hidden;
 }
 
-#home::after {
+#landing::after {
   content: '';
   position: absolute;
   top: 0;
@@ -32,7 +32,7 @@ body{
   z-index: 1;
 }
 
-#home .row {
+#landing .row {
   position: relative;
   z-index: 2;
 }
